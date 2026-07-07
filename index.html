@@ -1,226 +1,456 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
-  <title>מכירות ופיתוח עסקי B2B | HAAT</title>
-  <meta name="description" content="HAAT מגייסת אנשי מכירות ופיתוח עסקי B2B. עבודה מול מסעדות ועסקים, סביבת סטארטאפ דינמית ואפשרויות צמיחה." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>אנשי/ות פיתוח עסקי B2B | HAAT</title>
+  <meta name="description" content="HAAT מגייסת לתפקיד פיתוח עסקי B2B לעבודה מול מסעדות, רשתות ועסקי Retail.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <script>
-    const CONFIG = {
-      GTM_ID: 'GTM-KLGWN43',
-      WEBHOOK_URL: 'https://hook.us1.make.com/uq7rmokm3cgjc5znh7r6mc15sbwtydqo',
-      SOURCE: 'haat-b2b-sales'
-    };
-    if (CONFIG.GTM_ID) {
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer',CONFIG.GTM_ID);
-    }
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KLGWN43');
   </script>
+
   <style>
-    :root {
-      --primary:#C00035;
-      --primary-dark:#85001F;
-      --yellow:#F8CC07;
-      --yellow-dark:#DFB500;
-      --text:#1A1A1A;
-      --muted:#5f5f66;
-      --cream:#FDF8E1;
-      --white:#fff;
-      --border:#E8E0C0;
-      --error:#B91C1C;
-      --shadow:0 4px 24px rgba(192,22,56,.10);
-      --shadow-lg:0 12px 48px rgba(192,22,56,.18);
-      --radius:16px;
-      --container:1100px;
-      --sticky-cta-height:0px;
+    :root{
+      --red:#C01638;
+      --red-dark:#97112D;
+      --yellow:#F8CC03;
+      --ink:#151515;
+      --text:#3E3E46;
+      --muted:#6C6C76;
+      --line:#EEE6E4;
+      --white:#FFFFFF;
+      --soft:#FFFBEF;
+      --shadow:0 22px 70px rgba(32,20,24,.08);
+      --shadow-sm:0 12px 34px rgba(32,20,24,.06);
+      --radius:28px;
+      --mobile-cta:0px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    html{font-family:'Rubik',Arial,sans-serif;font-size:16px;scroll-behavior:smooth}
-    body{direction:rtl;background:var(--cream);color:var(--text);line-height:1.6;overflow-x:hidden}
-    a{color:inherit} img{max-width:100%;height:auto;display:block}
-    .container{width:min(var(--container),calc(100% - 40px));margin:auto}
+    html{font-family:'Rubik',Arial,sans-serif;scroll-behavior:smooth;font-size:16px}
+    body{background:#fff;color:var(--ink);line-height:1.6;direction:rtl;padding-bottom:var(--mobile-cta);overflow-x:hidden}
+    a{color:inherit}
+    img{max-width:100%;height:auto;display:block}
+    .page{background:#fff;overflow:hidden}
+    .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .header-inner{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+    .brand img{height:38px;width:auto}
+    .brand-line{height:30px;width:1px;background:rgba(0,0,0,.12)}
+    .brand-text{font-size:.86rem;font-weight:700;color:#222}
+    .cta{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:var(--red);color:#fff;padding:13px 24px;border-radius:999px;font-weight:900;border:0;box-shadow:0 12px 28px rgba(192,22,56,.2);cursor:pointer;font:inherit;transition:.18s}
+    .cta:hover{background:var(--red-dark);transform:translateY(-1px)}
+    .cta.secondary{background:#fff;color:var(--red);border:1px solid rgba(192,22,56,.16);box-shadow:none}
 
-    .site-header{background:#fff;border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(13,31,60,.06)}
-    .header-inner{display:flex;align-items:center;justify-content:center}
-    .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .logo img{height:36px;width:auto}.logo-tag{font-size:12px;font-weight:700;color:var(--muted);border-right:2px solid var(--border);padding-right:12px}
+    .hero{position:relative;background:#fff;border-bottom:1px solid rgba(0,0,0,.05)}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(248,204,3,.12),transparent 18%),linear-gradient(270deg,rgba(248,204,3,.1),transparent 22%);pointer-events:none}
+    .hero-inner{position:relative;max-width:1280px;margin:auto;padding:72px 22px 52px;display:grid;grid-template-columns:minmax(320px,500px) minmax(460px,1fr);gap:54px;align-items:center;direction:ltr}
+    .hero-visual,.hero-content{direction:rtl}
+    .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+    .hero-visual img{width:min(100%,520px);filter:drop-shadow(0 28px 55px rgba(21,21,21,.14))}
+    .hero-badge{position:absolute;right:50%;transform:translateX(52%);bottom:18px;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px 18px;box-shadow:var(--shadow-sm);min-width:290px;max-width:320px}
+    .hero-badge-copy strong{display:block;font-size:1.02rem;font-weight:900;color:var(--ink)}
+    .hero-badge-copy span{display:block;color:var(--muted);font-size:.93rem;font-weight:500;margin-top:3px}
+    .hero-badge-icon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--red);font-size:1.15rem;font-weight:900;flex:0 0 auto}
+    .hero-content{max-width:690px;text-align:right}
+    .eyebrow{display:inline-flex;align-items:center;border:1px solid rgba(192,22,56,.1);background:#FDF4F6;border-radius:999px;color:var(--red);font-weight:900;padding:9px 18px;font-size:.92rem;margin-bottom:20px;box-shadow:none}
+    h1{font-size:clamp(3rem,5.8vw,5.35rem);line-height:.97;letter-spacing:-.06em;font-weight:900;color:var(--ink);max-width:700px;margin:0}
+    h1 span{color:var(--red)}
+    .hero-lead{margin:28px 0 0;font-size:clamp(1.18rem,1.8vw,1.42rem);color:var(--text);max-width:690px;font-weight:500}
+    .hero-note{margin:18px 0 0;font-size:1.04rem;color:var(--muted);max-width:630px;font-weight:500}
+    .hero-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:34px 0 0;max-width:720px}
+    .point{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 18px 18px 54px;min-height:78px;box-shadow:none;position:relative;overflow:hidden}
+    .point:before{content:"✓";position:absolute;left:16px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--red);font-size:1rem;font-weight:900}
+    .point strong{display:block;color:var(--ink);font-size:1.01rem;margin-bottom:2px}
+    .point span{font-size:.9rem;color:var(--muted);font-weight:600}
+    .hero-actions{margin-top:30px;display:flex;gap:14px;justify-content:flex-start;flex-wrap:wrap}
+    .hero-showcase{display:none}
+    .hero-showcase-card{display:none}
 
-    .hero{position:relative;background:var(--primary);color:#fff;padding:58px 0 64px;overflow:hidden}
-    .hero:before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23F8CC07' fill-opacity='0.075'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
-    .hero-inner{position:relative;display:grid;grid-template-columns:1fr 440px;gap:60px;align-items:start}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(248,204,7,.18);border:1px solid rgba(248,204,7,.55);color:var(--yellow);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:800;margin-bottom:20px}
-    .hero-badge:before{content:'🚀'}
-    h1{font-size:clamp(31px,4vw,48px);line-height:1.15;font-weight:900;letter-spacing:-.03em;margin-bottom:18px;color:#fff}
-    h1 span{color:var(--yellow)}
-    .hero-subtitle{font-size:17px;color:rgba(255,255,255,.86);max-width:640px;margin-bottom:28px;line-height:1.75}
-    .hero-perks{display:grid;gap:10px;margin-bottom:28px;max-width:560px}
-    .hero-perk{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:rgba(255,255,255,.94)}
-    .hero-perk:before{content:'✔';display:grid;place-items:center;width:22px;height:22px;background:var(--yellow);color:var(--primary);border-radius:50%;font-size:11px;font-weight:900;flex:0 0 auto}
-    .hero-locations{display:flex;gap:10px;flex-wrap:wrap}.location-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:6px 14px;border-radius:999px;font-size:14px;font-weight:700}
+    .section{padding:74px 22px}
+    .section-inner{max-width:1180px;margin:auto}
+    .section-head{max-width:840px;margin:0 auto 30px;text-align:center}
+    .label{font-size:.88rem;font-weight:900;color:var(--red);margin-bottom:9px;display:block}
+    .title{font-size:clamp(1.9rem,3.5vw,3rem);line-height:1.12;font-weight:900;letter-spacing:-.035em}
+    .text{font-size:1.05rem;color:var(--muted);font-weight:500;margin-top:12px}
+    .fit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .fit-card{border:1px solid rgba(0,0,0,.08);border-radius:24px;padding:26px;background:#fff;box-shadow:var(--shadow-sm)}
+    .fit-card h3{font-size:1.15rem;color:var(--red);margin-bottom:8px}
+    .fit-card p{color:var(--muted);font-weight:500}
 
-    .form-card{background:#fff;color:var(--text);border-radius:20px;padding:34px 30px;box-shadow:var(--shadow-lg)}
-    .form-card-title{font-size:21px;font-weight:900;color:var(--primary);text-align:center;margin-bottom:4px}.form-card-sub{text-align:center;color:var(--muted);font-size:14px;margin-bottom:22px}
-    .form-group{margin-bottom:13px}.form-group label{display:block;font-size:13px;font-weight:800;margin-bottom:5px}.req{color:var(--primary)}
-    input,textarea,select{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font:inherit;font-size:15px;color:var(--text);background:#fff;direction:rtl;transition:.18s}
-    textarea{min-height:82px;resize:vertical}input:focus,textarea:focus,select:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(192,22,56,.12)}.error{border-color:var(--error)!important}.form-error-msg{display:none;color:var(--error);font-size:12px;margin-top:4px}.form-error-msg.visible{display:block}
-    input[type="file"]{padding:11px;background:#fff;cursor:pointer}.file-hint{display:block;color:var(--muted);font-size:12px;line-height:1.45;margin-top:5px}
-    .gate-question{background:var(--cream);border:1.5px solid var(--border);border-radius:12px;padding:15px;margin-bottom:13px}.gate-question-title{font-size:14px;font-weight:900;margin-bottom:12px;line-height:1.45}.gate-options{display:flex;gap:10px}.gate-option{flex:1;position:relative}.gate-option input{position:absolute;opacity:0}.gate-option label{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 8px;border:2px solid var(--border);border-radius:10px;background:#fff;font-weight:900;cursor:pointer;transition:.18s}.gate-option input:checked+label{border-color:var(--primary);background:rgba(192,22,56,.06);color:var(--primary)}.gate-no-msg{display:none;margin-top:10px;background:#FEF3F2;border:1px solid #FECACA;border-radius:10px;padding:10px 12px;font-size:13px;color:#991B1B}.gate-no-msg.visible{display:block}
-    .btn-submit{width:100%;border:0;border-radius:999px;background:var(--yellow);color:var(--primary);padding:16px;font:inherit;font-size:17px;font-weight:900;cursor:pointer;margin-top:16px;transition:.18s}.btn-submit:hover:not(:disabled){background:var(--yellow-dark);transform:translateY(-1px)}.btn-submit:disabled{opacity:.45;cursor:not-allowed}.btn-submit.loading{position:relative;color:transparent}.btn-submit.loading:after{content:"";position:absolute;inset:0;margin:auto;width:22px;height:22px;border:3px solid rgba(192,22,56,.22);border-top-color:var(--primary);border-radius:50%;animation:spin .7s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-    .privacy-note{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}.privacy-note a{text-decoration:underline}
+    .role-section{background:#fff;padding:16px 22px 74px}
+    .role-panel{max-width:1180px;margin:auto;background:#fff;color:var(--ink);border-radius:36px;padding:48px;border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .role-panel:before{content:"";position:absolute;top:0;right:0;left:0;height:6px;background:linear-gradient(90deg,var(--yellow),var(--red))}
+    .role-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:34px;align-items:start}
+    .role-copy h2{font-size:clamp(2.1rem,4.5vw,3.6rem);line-height:1;letter-spacing:-.05em;font-weight:900;margin:0 0 18px}
+    .role-copy p{font-size:1.05rem;color:var(--text);font-weight:600;max-width:520px;margin:0 0 24px}
+    .role-card-stack{display:grid;gap:18px}
+    .role-box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px 28px;box-shadow:var(--shadow-sm)}
+    .role-box h3{font-size:1.22rem;margin:0 0 14px;color:var(--red);font-weight:900}
+    .role-box ul{margin:0;padding:0 20px 0 0}
+    .role-box li{margin:9px 0;color:var(--text);font-weight:600}
+    .role-box li::marker{color:var(--yellow)}
 
-    section{padding:66px 0}.section-label{display:block;text-align:center;color:var(--primary);font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}.section-title{text-align:center;color:var(--primary);font-size:clamp(24px,3vw,36px);line-height:1.2;font-weight:900;margin-bottom:34px}
-    .about{background:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}.about-text{font-size:16px;color:#444;line-height:1.8}.about-text p+p{margin-top:14px}.about-text strong{color:var(--primary)}.stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}.stat-card{background:var(--cream);border:1px solid var(--border);border-radius:16px;padding:22px 18px;text-align:center}.stat-number{color:var(--primary);font-size:34px;font-weight:900;line-height:1}.stat-label{margin-top:6px;font-size:13px;color:#444;font-weight:700}
-    .benefits{background:var(--yellow)}.benefits .section-label,.benefits .section-title{color:var(--primary)}.benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.benefit-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:25px 18px;text-align:center;box-shadow:var(--shadow)}.benefit-icon{font-size:34px;margin-bottom:10px;display:block}.benefit-title{font-size:16px;font-weight:900;color:var(--primary);margin-bottom:8px}.benefit-desc{font-size:14px;color:var(--muted);line-height:1.55}
-    .role{background:#fff}.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.role-box{background:var(--cream);border:1px solid var(--border);border-radius:16px;padding:26px}.role-box-title{font-size:18px;color:var(--primary);font-weight:900;margin-bottom:14px}.role-list{list-style:none;display:grid;gap:10px}.role-list li{display:flex;gap:9px;color:#444;font-size:15px}.role-list li:before{content:'✓';font-weight:900;color:var(--primary);flex:0 0 auto}
-    .site-footer{background:var(--primary);color:rgba(255,255,255,.78);padding:28px 0;text-align:center}.footer-inner{display:grid;gap:10px;justify-items:center}.footer-legal{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.footer-legal a{font-size:13px;text-decoration:none}.footer-legal a:hover{text-decoration:underline}.footer-agency{font-size:12px}.footer-agency a{color:var(--yellow);font-weight:800;text-decoration:none}
+    .apply{background:#fff;padding:78px 22px}
+    .apply-layout{max-width:940px;margin:auto;display:grid;grid-template-columns:1fr;gap:24px;align-items:start;justify-items:center}
+    .apply-copy{text-align:center;max-width:740px}
+    .apply-copy h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;font-weight:900;letter-spacing:-.035em}
+    .apply-copy h2 span{color:var(--red)}
+    .apply-copy p{margin-top:16px;color:var(--muted);font-size:1.05rem;font-weight:500}
+    .form-card{width:100%;max-width:880px;background:#fff;border-radius:32px;padding:34px;box-shadow:var(--shadow);border:1px solid rgba(192,22,56,.12)}
+    .form-title{text-align:center;color:var(--red);font-size:1.7rem;font-weight:900;line-height:1.15}
+    .form-sub{text-align:center;color:var(--muted);font-weight:500;margin:8px 0 22px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .form-group{margin-bottom:13px}
+    .form-group.full{grid-column:1/-1}
+    .form-group label{display:block;font-size:.85rem;font-weight:800;margin-bottom:6px}
+    .req{color:var(--red)}
+    input,select,textarea{width:100%;border:1.5px solid #eadde1;background:#fff;border-radius:14px;padding:13px 14px;font:inherit;font-weight:500;color:#222;outline:none;transition:.18s;direction:rtl}
+    input:focus,select:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(192,22,56,.1)}
+    textarea{min-height:92px;resize:vertical}
+    .file-input{padding:12px;background:#fff}
+    .help{font-size:.78rem;color:var(--muted);margin-top:5px;font-weight:500}
+    .error-msg{font-size:.78rem;color:#B91C1C;display:none;margin-top:5px}
+    .error .error-msg{display:block}
+    .error input,.error select,.error textarea{border-color:#B91C1C}
+    .gate{grid-column:1/-1;background:#fff;border:1px solid rgba(192,22,56,.14);border-radius:18px;padding:15px}
+    .gate-title{font-weight:800;margin-bottom:10px}
+    .gate-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .gate input{position:absolute;opacity:0}
+    .gate label{display:flex;align-items:center;justify-content:center;border:1.5px solid #eadde1;background:#fff;border-radius:14px;padding:12px;font-weight:800;cursor:pointer}
+    .gate input:checked+label{background:var(--red);color:#fff;border-color:var(--red)}
+    .gate-warning{display:none;background:#fff;border:1px solid rgba(185,28,28,.28);color:#991B1B;border-radius:12px;padding:10px;margin-top:10px;font-size:.86rem;font-weight:600}
+    .gate-warning.visible{display:block}
+    .submit{width:100%;border:0;border-radius:999px;background:var(--red);color:#fff;font:inherit;font-size:1.05rem;font-weight:900;padding:16px 18px;cursor:pointer;box-shadow:0 14px 30px rgba(192,22,56,.25);transition:.18s}
+    .submit:hover:not(:disabled){background:var(--red-dark);transform:translateY(-1px)}
+    .submit:disabled{opacity:.45;cursor:not-allowed}
+    .privacy{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+    .privacy a{text-decoration:underline}
+    .loading{color:transparent!important;position:relative}
+    .loading:after{content:"";position:absolute;inset:0;margin:auto;width:22px;height:22px;border:3px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .75s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
 
-    .mobile-floating-cta{display:none;position:fixed;right:14px;left:72px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:90;border:0;border-radius:999px;background:var(--yellow);color:var(--primary);box-shadow:0 12px 30px rgba(0,0,0,.24);padding:15px 18px;font:inherit;font-size:16px;font-weight:900;cursor:pointer}.mobile-floating-cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+    .footer{padding:28px 22px 32px;background:#fff;border-top:1px solid rgba(0,0,0,.06);text-align:center;color:var(--muted);font-size:.92rem}
+    .footer-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .footer a{text-decoration:none}
 
-    .accessibility-float{position:fixed;left:12px;bottom:calc(var(--sticky-cta-height) + 16px + env(safe-area-inset-bottom));width:44px;height:44px;border-radius:999px;border:2px solid rgba(255,255,255,.55);background:var(--primary);color:#fff;display:grid;place-items:center;font-size:20px;box-shadow:0 8px 22px rgba(0,0,0,.22);cursor:pointer;z-index:100}.accessibility-panel{position:fixed;left:12px;bottom:calc(var(--sticky-cta-height) + 68px + env(safe-area-inset-bottom));width:min(260px,calc(100vw - 24px));padding:14px;border-radius:16px;background:#fff;color:#111;box-shadow:0 16px 40px rgba(0,0,0,.24);z-index:101;border:1px solid rgba(17,17,17,.12)}.accessibility-panel[hidden]{display:none}.accessibility-panel h2{font-size:1rem;margin-bottom:10px}.accessibility-panel button,.accessibility-panel a{width:100%;min-height:40px;margin-top:8px;border-radius:10px;border:1px solid rgba(17,17,17,.14);background:#f7f7f7;color:#111;font:inherit;font-size:14px;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;cursor:pointer}html.a11y-font-lg{font-size:112.5%}html.a11y-font-xl{font-size:125%}html.a11y-high-contrast body{background:#000!important;color:#fff!important}html.a11y-reduced-motion *,html.a11y-reduced-motion *:before,html.a11y-reduced-motion *:after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
-    .animate-on-scroll{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}.animate-on-scroll.visible{opacity:1;transform:none}
-    @media(max-width:900px){.hero{padding:42px 0}.hero-inner,.about-grid,.role-grid{grid-template-columns:1fr;gap:30px}.form-card{padding:28px 22px}.benefits-grid{grid-template-columns:1fr 1fr}.section{padding:54px 0}}
-    @media(max-width:560px){:root{--sticky-cta-height:64px}.container{width:min(100% - 28px,var(--container))}.logo img{height:32px}.hero-subtitle{font-size:16px}.gate-options{flex-direction:column}.stats,.benefits-grid{grid-template-columns:1fr}.section-title{text-align:right}.section-label{text-align:right}.benefit-card{text-align:right}.site-header{position:relative}.mobile-floating-cta{display:block}body{padding-bottom:76px}}
+    .mobile-float{display:none;position:fixed;right:14px;left:14px;bottom:14px;z-index:70;text-align:center;text-decoration:none;background:var(--red);color:#fff;padding:15px 20px;border-radius:999px;font-weight:900;box-shadow:0 16px 36px rgba(192,22,56,.28)}
+    .a11y-float{position:fixed;left:12px;bottom:16px;z-index:75;width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,.55);background:#111;color:#fff;display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 10px 25px rgba(0,0,0,.28);cursor:pointer}
+    .a11y-panel{position:fixed;left:12px;bottom:68px;width:min(270px,calc(100vw - 24px));z-index:76;background:#fff;color:#111;border-radius:18px;padding:14px;box-shadow:0 18px 45px rgba(0,0,0,.25);border:1px solid rgba(0,0,0,.12)}
+    .a11y-panel[hidden]{display:none}
+    .a11y-panel h2{font-size:1rem;margin-bottom:8px}
+    .a11y-panel button,.a11y-panel a{width:100%;min-height:40px;margin-top:8px;border-radius:10px;border:1px solid rgba(0,0,0,.12);background:#f7f7f7;color:#111;font:inherit;text-decoration:none;display:flex;align-items:center;justify-content:center;cursor:pointer}
+    .a11y-font-lg{font-size:112.5%}
+    .a11y-font-xl{font-size:125%}
+    .a11y-high-contrast body{background:#000!important;color:#fff!important}
+    .a11y-reduced-motion *, .a11y-reduced-motion *:before, .a11y-reduced-motion *:after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+    :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+    @media(max-width:980px){
+      .hero-inner,.fit-grid,.role-grid{grid-template-columns:1fr}
+      .hero-inner{gap:30px;padding-top:56px}
+      .hero-content{max-width:100%;text-align:center;order:1}
+      .hero-visual{order:2}
+      .hero-lead,.hero-note,h1{margin-left:auto;margin-right:auto}
+      .hero-actions{justify-content:center}
+      .hero-points{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+      .hero-badge{position:static;transform:none;margin-top:-18px;min-width:0;width:min(100%,320px)}
+      .role-panel{padding:34px 22px}
+      .form-grid{grid-template-columns:1fr}
+      .form-card{padding:26px 22px}
+    }
+    @media(max-width:720px){
+      .header-inner{padding:12px 16px}
+      .brand-line,.brand-text{display:none}
+      .hero-inner{padding:48px 16px 26px}
+      h1{font-size:clamp(2.35rem,14vw,3.6rem)}
+      .section,.apply,.role-section{padding-right:16px;padding-left:16px}
+      .mobile-float{display:block}
+      body{padding-bottom:84px}
+      .a11y-float{bottom:84px}
+      .a11y-panel{bottom:136px}
+      .point{padding-left:48px}
+    }
   </style>
 </head>
 <body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLGWN43" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="#hero" class="logo" aria-label="HAAT - דף הבית">
-        <img src="assets/logo.svg" alt="HAAT" />
-        <span class="logo-tag">גיוס עובדים</span>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLGWN43" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="page">
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#hero" aria-label="HAAT">
+        <img src="assets/haat-logo.svg" alt="HAAT">
+        <span class="brand-line" aria-hidden="true"></span>
+        <span class="brand-text">Business Development Talent</span>
       </a>
+      <a class="cta" href="#apply">להגשת מועמדות</a>
     </div>
   </header>
 
   <main>
-    <section id="hero" class="hero" aria-labelledby="hero-title">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <div class="hero-badge">HAAT בצמיחה — עכשיו מגייסים אנשים כמוך</div>
-          <h1 id="hero-title">אנשי/ות מכירות ופיתוח עסקי<br><span>B2B | HAAT</span></h1>
-          <p class="hero-subtitle">HAAT, פלטפורמת המשלוחים הצומחת בישראל, מרחיבה את פעילותה ומגייסת אנשי מכירות ופיתוח עסקי עם ניסיון B2B.</p>
-          <div class="hero-perks" role="list" aria-label="יתרונות התפקיד">
-            <div class="hero-perk" role="listitem">עבודה מול מסעדות ועסקים מובילים</div>
-            <div class="hero-perk" role="listitem">סביבת סטארטאפ דינמית וצומחת</div>
-            <div class="hero-perk" role="listitem">אפשרויות קידום והתפתחות מקצועית</div>
-            <div class="hero-perk" role="listitem">הזדמנות להצטרף בזמן הנכון</div>
-          </div>
-          <div class="hero-locations" aria-label="מיקומים">
-            <span class="location-tag">📍 חיפה</span>
-            <span class="location-tag">📍 תל אביב</span>
-            <span class="location-tag">🚗 עבודת שטח</span>
-          </div>
-        </div>
-        <div class="form-card" role="complementary" aria-label="טופס הגשת מועמדות">
-          <h2 class="form-card-title">הגישו מועמדות עכשיו</h2>
-          <p class="form-card-sub">ממלאים פרטים ואנחנו חוזרים אליכם</p>
-          <form id="leadForm" novalidate aria-label="טופס מועמדות">
-            <div class="form-group"><label for="name">שם מלא <span class="req">*</span></label><input type="text" id="name" name="name" placeholder="ישראל ישראלי" autocomplete="name" required><span class="form-error-msg" id="name-err" role="alert">נא להזין שם מלא</span></div>
-            <div class="form-group"><label for="phone">טלפון <span class="req">*</span></label><input type="tel" id="phone" name="phone" placeholder="05X-XXXXXXX" autocomplete="tel" required><span class="form-error-msg" id="phone-err" role="alert">נא להזין מספר טלפון תקין</span></div>
-            <div class="form-group"><label for="email">אימייל <span class="req">*</span></label><input type="email" id="email" name="email" placeholder="name@email.com" autocomplete="email" required><span class="form-error-msg" id="email-err" role="alert">נא להזין כתובת אימייל תקינה</span></div>
-            <div class="form-group"><label for="city">עיר מגורים <span class="req">*</span></label><input type="text" id="city" name="city" placeholder="תל אביב" autocomplete="address-level2" required><span class="form-error-msg" id="city-err" role="alert">נא להזין עיר מגורים</span></div>
-            <div class="gate-question" role="group" aria-labelledby="gate-label">
-              <p class="gate-question-title" id="gate-label">האם יש לך ניסיון של מעל שנה במכירות / פיתוח עסקי B2B בתחום המזון או הקמעונאות? <span class="req">*</span></p>
-              <div class="gate-options"><div class="gate-option"><input type="radio" name="gate_b2b_food" id="gate-yes" value="yes" required><label for="gate-yes">✔ כן</label></div><div class="gate-option"><input type="radio" name="gate_b2b_food" id="gate-no" value="no"><label for="gate-no">✘ לא</label></div></div>
-              <div class="gate-no-msg" id="gate-no-msg" role="alert">תודה על ההתעניינות. התפקיד דורש ניסיון B2B רלוונטי, ולכן כרגע לא נוכל להתקדם.</div>
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-visual">
+          <img src="assets/mobile-mockup.webp" alt="ממשק האפליקציה של HAAT">
+          <div class="hero-badge" aria-label="צמיחה ב-HAAT">
+            <div class="hero-badge-icon">↗</div>
+            <div class="hero-badge-copy">
+              <strong>HAAT בצמיחה מואצת</strong>
+              <span>ומחפשת אנשים חזקים שיצטרפו למסע</span>
             </div>
-            <div class="form-group"><label for="experience">נשמח לשמוע בקצרה על הניסיון שלך <span class="req">*</span></label><textarea id="experience" name="experience" placeholder="ספר/י בקצרה על הניסיון שלך במכירות B2B..." required></textarea><span class="form-error-msg" id="experience-err" role="alert">נא לתאר את הניסיון שלך</span></div>
-            <div class="form-group"><label for="cv">צירוף קו״ח <span style="color:var(--muted);font-weight:600">(לא חובה)</span></label><input type="file" id="cv" name="cv_file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"><small class="file-hint">PDF / DOC / DOCX עד 10MB</small><span class="form-error-msg" id="cv-err" role="alert">הקובץ צריך להיות PDF / DOC / DOCX עד 10MB</span></div>
-            <button type="submit" class="btn-submit" id="submitBtn" disabled>הגישו מועמדות →</button>
-            <p class="privacy-note">בשליחת הטופס אתם מסכימים ל<a href="https://haat.delivery/he/privacy-policy" target="_blank" rel="noopener">מדיניות הפרטיות</a>.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="about" aria-labelledby="about-title">
-      <div class="container">
-        <span class="section-label">אודות HAAT</span>
-        <h2 id="about-title" class="section-title">החברות הכי מעניינות הן אלה שבדרך לפסגה</h2>
-        <div class="about-grid">
-          <div class="about-text animate-on-scroll">
-            <p><strong>HAAT</strong> היא חברת FoodTech בצמיחה, שמחברת בין לקוחות, מסעדות ועסקים ברחבי ישראל.</p>
-            <p>אנחנו מחפשים אנשים שיודעים לעבוד מול בעלי עסקים, לזהות הזדמנויות ולבנות קשרים שמייצרים צמיחה אמיתית.</p>
           </div>
-          <div class="stats animate-on-scroll" aria-label="נתוני תפקיד">
-            <div class="stat-card"><div class="stat-number">B2B</div><div class="stat-label">מסעדות ועסקים</div></div>
-            <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">חיפה + תל אביב</div></div>
-            <div class="stat-card"><div class="stat-number">🚗</div><div class="stat-label">עבודת שטח</div></div>
-            <div class="stat-card"><div class="stat-number">📈</div><div class="stat-label">אופק מקצועי</div></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="eyebrow">גיוס עובדים - חיפה / תל אביב / עבודת שטח</div>
+          <h1>אנשי/ות מכירות <span>B2B</span> | פיתוח עסקי HAAT</h1>
+          <p class="hero-lead">לא בכל יום אפשר להצטרף לחברה שנמצאת רגע לפני קפיצת מדרגה משמעותית. HAAT, פלטפורמת המשלוחים הצומחת בישראל, מרחיבה את הפעילות ומגייסת אנשי מכירות ופיתוח עסקי עם ניסיון B2B.</p>
+          <p class="hero-note">אם יש לכם ניסיון מסחרי חזק, גישה לעבודה מול עסקים ויכולת לייצר קשרים אמיתיים בשטח - זו יכולה להיות ההזדמנות הבאה שלכם.</p>
+          <div class="hero-points" aria-label="נקודות עיקריות">
+            <div class="point"><strong>עבודה מול מסעדות ועסקים מובילים</strong><span>תפקיד שטח עם חיבור ישיר לעולמות ה-FoodTech וה-Retail</span></div>
+            <div class="point"><strong>סביבת סטארטאפ צומחת</strong><span>מקום דינמי עם קצב גבוה והרבה מקום להשפיע</span></div>
+            <div class="point"><strong>הזדמנות להצטרף בזמן הנכון</strong><span>שלב צמיחה עם אפשרויות אמיתיות להתקדמות</span></div>
+            <div class="point"><strong>פיתוח עסקי אמיתי</strong><span>פתיחת דלתות, יצירת שותפויות והובלת תהליכים מסחריים</span></div>
+          </div>
+          <div class="hero-actions">
+            <a class="cta" href="#apply">הגישו מועמדות עכשיו</a>
+            <a class="cta secondary" href="#role">מה כולל התפקיד?</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="benefits" aria-labelledby="benefits-title">
-      <div class="container">
-        <span class="section-label">למה להצטרף?</span>
-        <h2 id="benefits-title" class="section-title">מה מחכה לכם ב-HAAT</h2>
-        <div class="benefits-grid">
-          <div class="benefit-card animate-on-scroll"><span class="benefit-icon">🤝</span><div class="benefit-title">עבודה מול עסקים</div><div class="benefit-desc">בניית שותפויות עם מסעדות ועסקי אוכל.</div></div>
-          <div class="benefit-card animate-on-scroll"><span class="benefit-icon">🚀</span><div class="benefit-title">סטארטאפ בצמיחה</div><div class="benefit-desc">סביבה דינמית ומהירה עם מקום להשפיע.</div></div>
-          <div class="benefit-card animate-on-scroll"><span class="benefit-icon">📈</span><div class="benefit-title">אפשרויות קידום</div><div class="benefit-desc">הזדמנות לצמוח יחד עם החברה.</div></div>
-          <div class="benefit-card animate-on-scroll"><span class="benefit-icon">📍</span><div class="benefit-title">חיפה | תל אביב</div><div class="benefit-desc">שילוב משרדים ועבודת שטח.</div></div>
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="label">למי זה מתאים</span>
+          <h2 class="title">תפקיד למי שיודע לזהות הזדמנות, לפתוח דלתות ולבנות קשרים מסחריים חזקים</h2>
+          <p class="text">אם יש לכם רקע מסחרי טוב, גישה חדה לעבודה מול עסקים וניסיון בעולמות B2B - כנראה שאתם במקום הנכון.</p>
+        </div>
+        <div class="fit-grid">
+          <article class="fit-card"><h3>רקע מסחרי B2B</h3><p>ניסיון של שנה ומעלה במכירות, פיתוח עסקי או ניהול שותפים מול עסקים.</p></article>
+          <article class="fit-card"><h3>חיבור ל-Tech / Marketplace</h3><p>יתרון משמעותי למגיעים ממרקטפלייס, איקומרס, SaaS, Retail או FoodTech.</p></article>
+          <article class="fit-card"><h3>אופי עצמאי בשטח</h3><p>מישהו שיודע לפתוח אזור, לנהל pipeline ולעבוד מול יעדים עם הרבה עצמאות.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="role" aria-labelledby="role-title">
-      <div class="container">
-        <span class="section-label">התפקיד</span>
-        <h2 id="role-title" class="section-title">מה כולל התפקיד?</h2>
+    <section class="role-section" id="role">
+      <div class="role-panel">
         <div class="role-grid">
-          <div class="role-box animate-on-scroll"><div class="role-box-title">אחריות עיקרית</div><ul class="role-list"><li>יצירת שותפויות עם מסעדות ועסקי אוכל</li><li>הובלת תהליכים מסחריים מקצה לקצה</li><li>ניהול קשרים עם בעלי עסקים בשטח</li></ul></div>
-          <div class="role-box animate-on-scroll"><div class="role-box-title">דרישות מרכזיות</div><ul class="role-list"><li>ניסיון של מעל שנה במכירות B2B</li><li>ניסיון בתחום המזון / קמעונאות - יתרון</li><li>נכונות לעבודת שטח ותקשורת מצוינת</li></ul></div>
+          <div class="role-copy">
+            <span class="label">התפקיד</span>
+            <h2>מה כולל התפקיד?</h2>
+            <p>אחריות על יצירת שותפויות, ניהול קשרים מסחריים והובלת תהליכי מכירה מול מסעדות, רשתות ועסקי Retail.</p>
+            <a class="cta" href="#apply">אני רוצה להגיש מועמדות</a>
+          </div>
+          <div class="role-card-stack">
+            <div class="role-box">
+              <h3>אחריות עיקרית</h3>
+              <ul>
+                <li>יצירת שותפויות עם מסעדות ועסקי אוכל</li>
+                <li>הובלת תהליכים מסחריים מקצה לקצה</li>
+                <li>זיהוי הזדמנויות עסקיות חדשות</li>
+                <li>ניהול קשרים עם בעלי עסקים בשטח</li>
+                <li>עמידה ביעדי מכירות ופיתוח</li>
+              </ul>
+            </div>
+            <div class="role-box">
+              <h3>דרישות התפקיד</h3>
+              <ul>
+                <li>ניסיון של מעל שנה במכירות B2B</li>
+                <li>ניסיון בתחום המזון / קמעונאות - יתרון</li>
+                <li>יכולת עבודה עצמאית ובצוות</li>
+                <li>תקשורת מעולה מול בעלי עסקים</li>
+                <li>נכונות לעבודת שטח</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="apply" id="apply">
+      <div class="apply-layout">
+        <div class="apply-copy">
+          <span class="label">השלב הבא</span>
+          <h2><span>הגשת מועמדות</span></h2>
+          <p>ממלאים פרטים, מצרפים קורות חיים ונחזור אליכם אם יש התאמה.</p>
+        </div>
+
+        <div class="form-card" role="complementary" aria-label="טופס הגשת מועמדות">
+          <h2 class="form-title">הגשת מועמדות</h2>
+          <p class="form-sub">השאירו פרטים, צרפו קורות חיים ונמשיך משם.</p>
+
+          <form id="leadForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group" data-field="name">
+                <label for="name">שם מלא <span class="req">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required placeholder="שם מלא">
+                <div class="error-msg">נא להזין שם מלא</div>
+              </div>
+              <div class="form-group" data-field="phone">
+                <label for="phone">טלפון <span class="req">*</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="05X-XXXXXXX">
+                <div class="error-msg">נא להזין טלפון תקין</div>
+              </div>
+              <div class="form-group" data-field="email">
+                <label for="email">אימייל <span class="req">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="name@email.com">
+                <div class="error-msg">נא להזין אימייל תקין</div>
+              </div>
+              <div class="form-group" data-field="city">
+                <label for="city">עיר מגורים <span class="req">*</span></label>
+                <input id="city" name="city" type="text" autocomplete="address-level2" required placeholder="תל אביב">
+                <div class="error-msg">נא להזין עיר מגורים</div>
+              </div>
+
+              <div class="gate" data-field="gate_b2b">
+                <p class="gate-title">האם יש לך ניסיון של שנה ומעלה במכירות B2B / פיתוח עסקי? <span class="req">*</span></p>
+                <div class="gate-options">
+                  <div><input type="radio" name="gate_b2b" id="gate_yes" value="yes" required><label for="gate_yes">כן</label></div>
+                  <div><input type="radio" name="gate_b2b" id="gate_no" value="no"><label for="gate_no">לא</label></div>
+                </div>
+                <div class="gate-warning" id="gateWarning">תודה על ההתעניינות. לתפקיד הזה נדרש ניסיון B2B או פיתוח עסקי.</div>
+              </div>
+
+              <div class="form-group full" data-field="background_world">
+                <label for="background_world">מאיזה עולם הגעת? <span class="req">*</span></label>
+                <select id="background_world" name="background_world" required>
+                  <option value="">בחרו אפשרות</option>
+                  <option>Marketplace / פלטפורמות</option>
+                  <option>E-commerce</option>
+                  <option>SaaS / Tech</option>
+                  <option>FoodTech</option>
+                  <option>Retail</option>
+                  <option>מסעדנות / עבודה מול מסעדות</option>
+                  <option>אחר</option>
+                </select>
+                <div class="error-msg">נא לבחור תחום ניסיון</div>
+              </div>
+
+              <div class="form-group full" data-field="experience">
+                <label for="experience">כמה מילים על הניסיון שלך <span class="req">*</span></label>
+                <textarea id="experience" name="experience" required placeholder="לדוגמה: תפקיד אחרון, סוג לקוחות, גודל עסקאות, עבודה מול עסקים / מסעדות / ריטייל..."></textarea>
+                <div class="error-msg">נא לכתוב בקצרה על הניסיון</div>
+              </div>
+
+              <div class="form-group full" data-field="cv_file">
+                <label for="cv_file">צירוף קורות חיים <span class="req">*</span></label>
+                <input class="file-input" id="cv_file" name="cv_file" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                <div class="help">PDF / DOC / DOCX עד 10MB</div>
+                <div class="error-msg">נא לצרף קובץ קורות חיים תקין עד 10MB</div>
+              </div>
+            </div>
+
+            <button id="submitBtn" class="submit" type="submit" disabled>שליחת מועמדות</button>
+            <p class="privacy">בשליחת הטופס אתם מסכימים ל<a href="https://haat.delivery/he/privacy-policy" target="_blank" rel="noopener">מדיניות הפרטיות</a>.</p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> HAAT. כל הזכויות שמורות.</span>
-      <div class="footer-legal"><a href="https://haat.delivery/he/terms-and-conditions" target="_blank" rel="noopener">תנאי שימוש</a><span>|</span><a href="https://haat.delivery/he/privacy-policy" target="_blank" rel="noopener">מדיניות פרטיות</a><span>|</span><a href="https://haat.delivery/he/accessibility-statement" target="_blank" rel="noopener">הצהרת נגישות</a></div>
-      <p class="footer-agency">עוצב ופותח על ידי <a href="https://youngmedia.co.il" target="_blank" rel="noopener">Young Media</a></p>
+  <footer class="footer">
+    <div>© 2026 HAAT. כל הזכויות שמורות.</div>
+    <div class="footer-links">
+      <a href="https://haat.delivery/he/terms-and-conditions" target="_blank" rel="noopener">תנאי שימוש</a>
+      <span>|</span>
+      <a href="https://haat.delivery/he/privacy-policy" target="_blank" rel="noopener">מדיניות פרטיות</a>
+      <span>|</span>
+      <a href="https://haat.delivery/he/accessibility-statement" target="_blank" rel="noopener">הצהרת נגישות</a>
     </div>
   </footer>
+</div>
 
-  <button class="mobile-floating-cta" id="mobileFormCta" type="button" aria-label="מעבר לטופס הגשת מועמדות">להגשת מועמדות</button>
+<a class="mobile-float" href="#apply">להגשת מועמדות</a>
+<button class="a11y-float" id="accessibilityToggle" type="button" aria-label="פתח תפריט נגישות" aria-controls="accessibilityPanel" aria-expanded="false">♿</button>
+<div class="a11y-panel" id="accessibilityPanel" role="region" aria-labelledby="a11yTitle" hidden>
+  <h2 id="a11yTitle">אפשרויות נגישות</h2>
+  <button type="button" data-a11y="font-plus">הגדלת טקסט</button>
+  <button type="button" data-a11y="font-minus">הקטנת טקסט</button>
+  <button type="button" data-a11y="contrast">ניגודיות גבוהה</button>
+  <button type="button" data-a11y="motion">עצירת אנימציות</button>
+  <a href="https://haat.delivery/he/accessibility-statement" target="_blank" rel="noopener">הצהרת נגישות</a>
+</div>
 
-  <button class="accessibility-float" id="accessibilityToggle" type="button" aria-label="פתח תפריט נגישות" aria-controls="accessibilityPanel" aria-expanded="false"><span aria-hidden="true">♿</span></button>
-  <div class="accessibility-panel" id="accessibilityPanel" role="region" aria-labelledby="a11yTitle" hidden>
-    <h2 id="a11yTitle">אפשרויות נגישות</h2>
-    <button type="button" data-a11y-action="font-plus">הגדלת טקסט</button><button type="button" data-a11y-action="font-minus">הקטנת טקסט</button><button type="button" data-a11y-action="contrast">ניגודיות גבוהה</button><button type="button" data-a11y-action="motion">עצירת אנימציות</button><a href="https://haat.delivery/he/accessibility-statement" target="_blank" rel="noopener">הצהרת נגישות</a>
-  </div>
+<script>
+(function(){
+  'use strict';
+  var WEBHOOK_URL='https://hook.us1.make.com/uq7rmokm3cgjc5znh7r6mc15sbwtydqo';
+  var MAX_FILE_SIZE=10*1024*1024;
+  var TRACKING_KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid','wbraid','gbraid','msclkid','li_fat_id'];
 
-  <script>
-    (function(){
-      'use strict';
-      document.getElementById('year').textContent = new Date().getFullYear();
-      const trackingKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid','wbraid','gbraid','msclkid','li_fat_id'];
-      function capture(){const p=new URLSearchParams(location.search);const out={page_url:location.href,referrer:document.referrer||'',user_agent:navigator.userAgent,timestamp:new Date().toISOString(),source:CONFIG.SOURCE};trackingKeys.forEach(k=>{const v=p.get(k)||localStorage.getItem('tracking_'+k)||'';if(v)localStorage.setItem('tracking_'+k,v);out[k]=v});return out}
-      const tracking=capture();
-      const form=document.getElementById('leadForm'), submit=document.getElementById('submitBtn'), gateYes=document.getElementById('gate-yes'), gateNo=document.getElementById('gate-no'), gateNoMsg=document.getElementById('gate-no-msg'), mobileCta=document.getElementById('mobileFormCta');
-      const MAX_CV_SIZE = 10 * 1024 * 1024;
-      const ALLOWED_CV_TYPES = ['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-      function validPhone(v){return /^0[2-9]\d{7,8}$/.test(v.replace(/[\s\-.]/g,''))} function validEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)}
-      function show(el){el.classList.add('error');el.setAttribute('aria-invalid','true');document.getElementById(el.id+'-err').classList.add('visible')} function clear(el){el.classList.remove('error');el.removeAttribute('aria-invalid');document.getElementById(el.id+'-err').classList.remove('visible')}
-      function validCv(file){if(!file)return false;const ext=(file.name.split('.').pop()||'').toLowerCase();return file.size<=MAX_CV_SIZE && (ALLOWED_CV_TYPES.includes(file.type) || ['pdf','doc','docx'].includes(ext))}
-      function updateState(){submit.disabled = !(gateYes.checked) || gateNo.checked; gateNoMsg.classList.toggle('visible',gateNo.checked)}
-      gateYes.addEventListener('change',updateState);gateNo.addEventListener('change',updateState);
-      ['name','phone','email','city','experience','cv'].forEach(id=>document.getElementById(id).addEventListener(id==='cv'?'change':'input',e=>clear(e.target)));
-      if(mobileCta){mobileCta.addEventListener('click',()=>{document.querySelector('.form-card').scrollIntoView({behavior:'smooth',block:'start'});setTimeout(()=>document.getElementById('name').focus({preventScroll:true}),450);});}
-      form.addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('name'),phone=document.getElementById('phone'),email=document.getElementById('email'),city=document.getElementById('city'),experience=document.getElementById('experience'),cv=document.getElementById('cv');let ok=true;if(!name.value.trim()){show(name);ok=false}else clear(name);if(!validPhone(phone.value.trim())){show(phone);ok=false}else clear(phone);if(!validEmail(email.value.trim())){show(email);ok=false}else clear(email);if(!city.value.trim()){show(city);ok=false}else clear(city);if(!experience.value.trim()){show(experience);ok=false}else clear(experience);if(cv.files[0]&&!validCv(cv.files[0])){show(cv);ok=false}else clear(cv);if(!ok){const first=form.querySelector('.error');if(first)first.focus();return}submit.disabled=true;submit.classList.add('loading');const payload={form_id:'leadForm',name:name.value.trim(),phone:phone.value.trim(),email:email.value.trim(),city:city.value.trim(),experience_text:experience.value.trim(),gate_b2b_food:gateYes.checked?'yes':'no',cv_attached:cv.files[0]?'yes':'no',cv_file_name:cv.files[0]?cv.files[0].name:'',cv_file_size:cv.files[0]?cv.files[0].size:'',...tracking};const data=new FormData();Object.entries(payload).forEach(([key,value])=>data.append(key,value));if(cv.files[0]) data.append('cv_file',cv.files[0],cv.files[0].name);const thankPayload={...payload};delete thankPayload.cv_file_size;const thankUrl='thankyou.html?'+new URLSearchParams(thankPayload).toString();fetch(CONFIG.WEBHOOK_URL,{method:'POST',body:data}).catch(()=>{}).finally(()=>{location.href=thankUrl});});
-      const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.animate-on-scroll').forEach(el=>observer.observe(el));
-      const root=document.documentElement,toggle=document.getElementById('accessibilityToggle'),panel=document.getElementById('accessibilityPanel');let state={font:localStorage.getItem('a11y-font')||'base',contrast:localStorage.getItem('a11y-contrast')==='true',motion:localStorage.getItem('a11y-motion')==='true'};function apply(){root.classList.toggle('a11y-font-lg',state.font==='lg');root.classList.toggle('a11y-font-xl',state.font==='xl');root.classList.toggle('a11y-high-contrast',state.contrast);root.classList.toggle('a11y-reduced-motion',state.motion);localStorage.setItem('a11y-font',state.font);localStorage.setItem('a11y-contrast',String(state.contrast));localStorage.setItem('a11y-motion',String(state.motion))}function setOpen(open){panel.hidden=!open;toggle.setAttribute('aria-expanded',String(open));if(open){const first=panel.querySelector('button,a');if(first)first.focus()}}toggle.addEventListener('click',()=>setOpen(panel.hidden));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden){setOpen(false);toggle.focus()}});panel.addEventListener('click',e=>{const a=e.target.getAttribute('data-a11y-action');if(!a)return;if(a==='font-plus')state.font=state.font==='base'?'lg':'xl';if(a==='font-minus')state.font=state.font==='xl'?'lg':'base';if(a==='contrast')state.contrast=!state.contrast;if(a==='motion')state.motion=!state.motion;apply()});apply();
-    })();
-  </script>
+  function collectTracking(){
+    var params=new URLSearchParams(window.location.search);
+    var data={page_url:window.location.href,referrer:document.referrer||'',user_agent:navigator.userAgent,timestamp:new Date().toISOString()};
+    TRACKING_KEYS.forEach(function(k){var v=params.get(k)||localStorage.getItem('tracking_'+k)||''; if(v)localStorage.setItem('tracking_'+k,v); data[k]=v;});
+    return data;
+  }
+  function isPhone(v){return /^0[2-9]\d{7,8}$/.test((v||'').replace(/[\s\-.]/g,''));}
+  function isEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v||'');}
+  function setError(el,on){var wrap=el.closest('[data-field]'); if(wrap)wrap.classList.toggle('error',!!on); el.setAttribute('aria-invalid',on?'true':'false');}
+  function scrollToFirstError(){var first=document.querySelector('.error input,.error select,.error textarea,.error .gate-options input'); if(first)first.focus();}
+
+  var form=document.getElementById('leadForm');
+  var submit=document.getElementById('submitBtn');
+  var gateYes=document.getElementById('gate_yes');
+  var gateNo=document.getElementById('gate_no');
+  var gateWarning=document.getElementById('gateWarning');
+  var cv=document.getElementById('cv_file');
+
+  function updateSubmit(){
+    if(gateNo.checked){gateWarning.classList.add('visible'); submit.disabled=true; return;}
+    gateWarning.classList.remove('visible');
+    submit.disabled=!gateYes.checked;
+  }
+  [gateYes,gateNo].forEach(function(el){el.addEventListener('change',updateSubmit);});
+  form.addEventListener('input',function(e){var target=e.target;if(target && target.matches('input,select,textarea')) setError(target,false);});
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var valid=true;
+    var name=document.getElementById('name'), phone=document.getElementById('phone'), email=document.getElementById('email'), city=document.getElementById('city'), bg=document.getElementById('background_world'), exp=document.getElementById('experience');
+    [[name,!!name.value.trim()],[phone,isPhone(phone.value)],[email,isEmail(email.value)],[city,!!city.value.trim()],[bg,!!bg.value],[exp,!!exp.value.trim()]].forEach(function(pair){setError(pair[0],!pair[1]); if(!pair[1])valid=false;});
+    var gateValid=gateYes.checked && !gateNo.checked;
+    document.querySelector('[data-field="gate_b2b"]').classList.toggle('error',!gateValid);
+    if(!gateValid)valid=false;
+    var file=cv.files && cv.files[0];
+    var okFile=!!file && /\.(pdf|doc|docx)$/i.test(file.name) && file.size<=MAX_FILE_SIZE;
+    setError(cv,!okFile); if(!okFile)valid=false;
+    if(!valid){scrollToFirstError();return;}
+
+    submit.disabled=true; submit.classList.add('loading');
+    var fd=new FormData();
+    fd.append('form_id','haat_b2b_sales_landing');
+    fd.append('name',name.value.trim()); fd.append('phone',phone.value.trim()); fd.append('email',email.value.trim()); fd.append('city',city.value.trim());
+    fd.append('gate_b2b','yes'); fd.append('background_world',bg.value); fd.append('experience',exp.value.trim()); fd.append('cv_file',file,file.name);
+    var tracking=collectTracking(); Object.keys(tracking).forEach(function(k){fd.append(k,tracking[k]);});
+    var thankParams=new URLSearchParams({name:name.value.trim(),phone:phone.value.trim(),email:email.value.trim(),city:city.value.trim(),gate_b2b:'yes',background_world:bg.value});
+    Object.keys(tracking).forEach(function(k){if(tracking[k])thankParams.set(k,tracking[k]);});
+
+    fetch(WEBHOOK_URL,{method:'POST',body:fd,keepalive:false}).catch(function(){}).finally(function(){window.location.href='thankyou.html?'+thankParams.toString();});
+  });
+
+  var root=document.documentElement,toggle=document.getElementById('accessibilityToggle'),panel=document.getElementById('accessibilityPanel');
+  if(toggle&&panel){
+    var state={font:localStorage.getItem('a11y-font')||'base',contrast:localStorage.getItem('a11y-contrast')==='true',motion:localStorage.getItem('a11y-motion')==='true'};
+    function apply(){root.classList.toggle('a11y-font-lg',state.font==='lg');root.classList.toggle('a11y-font-xl',state.font==='xl');root.classList.toggle('a11y-high-contrast',state.contrast);root.classList.toggle('a11y-reduced-motion',state.motion);localStorage.setItem('a11y-font',state.font);localStorage.setItem('a11y-contrast',String(state.contrast));localStorage.setItem('a11y-motion',String(state.motion));}
+    function open(on){panel.hidden=!on;toggle.setAttribute('aria-expanded',String(on));if(on){var first=panel.querySelector('button,a');if(first)first.focus();}}
+    toggle.addEventListener('click',function(){open(panel.hidden);});
+    document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&!panel.hidden){open(false);toggle.focus();}});
+    panel.addEventListener('click',function(ev){var a=ev.target.getAttribute('data-a11y'); if(!a)return; if(a==='font-plus')state.font=state.font==='base'?'lg':'xl'; if(a==='font-minus')state.font=state.font==='xl'?'lg':'base'; if(a==='contrast')state.contrast=!state.contrast; if(a==='motion')state.motion=!state.motion; apply();});
+    apply();
+  }
+})();
+</script>
 </body>
 </html>
