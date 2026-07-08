@@ -34,12 +34,12 @@
       --radius:28px;
       --mobile-cta:0px;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{font-family:'Rubik',Arial,sans-serif;scroll-behavior:smooth;font-size:16px}
-    body{background:#fff;color:var(--ink);line-height:1.6;direction:rtl;padding-bottom:var(--mobile-cta);overflow-x:hidden}
+    *{box-sizing:border-box;margin:0;padding:0;min-width:0}
+    html{font-family:'Rubik',Arial,sans-serif;scroll-behavior:smooth;font-size:16px;width:100%;max-width:100%;overflow-x:hidden}
+    body{background:#fff;color:var(--ink);line-height:1.6;direction:rtl;padding-bottom:var(--mobile-cta);overflow-x:hidden;width:100%;max-width:100%}
     a{color:inherit}
     img{max-width:100%;height:auto;display:block}
-    .page{background:#fff;overflow:hidden}
+    .page{background:#fff;overflow:hidden;width:100%;max-width:100vw}
     .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
     .header-inner{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
     .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -52,7 +52,7 @@
 
     .hero{position:relative;background:#fff;border-bottom:1px solid rgba(0,0,0,.05)}
     .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(248,204,3,.12),transparent 18%),linear-gradient(270deg,rgba(248,204,3,.1),transparent 22%);pointer-events:none}
-    .hero-inner{position:relative;max-width:1280px;margin:auto;padding:72px 22px 52px;display:grid;grid-template-columns:minmax(320px,500px) minmax(460px,1fr);gap:54px;align-items:center;direction:ltr}
+    .hero-inner{position:relative;width:100%;max-width:1280px;margin:auto;padding:72px 22px 52px;display:grid;grid-template-columns:minmax(320px,500px) minmax(460px,1fr);gap:54px;align-items:center;direction:ltr}
     .hero-visual,.hero-content{direction:rtl}
     .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
     .hero-visual img{width:min(100%,520px);filter:drop-shadow(0 28px 55px rgba(21,21,21,.14))}
@@ -62,13 +62,13 @@
     .hero-badge-icon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--red);font-size:1.15rem;font-weight:900;flex:0 0 auto}
     .hero-content{max-width:690px;text-align:right}
     .eyebrow{display:inline-flex;align-items:center;border:1px solid rgba(192,22,56,.1);background:#FDF4F6;border-radius:999px;color:var(--red);font-weight:900;padding:9px 18px;font-size:.92rem;margin-bottom:20px;box-shadow:none}
-    h1{font-size:clamp(3rem,5.8vw,5.35rem);line-height:.97;letter-spacing:-.06em;font-weight:900;color:var(--ink);max-width:700px;margin:0}
+    h1{font-size:clamp(2.55rem,4.9vw,4.45rem);line-height:.99;letter-spacing:-.055em;font-weight:900;color:var(--ink);max-width:700px;margin:0}
     h1 span{color:var(--red)}
     .hero-lead{margin:28px 0 0;font-size:clamp(1.18rem,1.8vw,1.42rem);color:var(--text);max-width:690px;font-weight:500}
     .hero-note{margin:18px 0 0;font-size:1.04rem;color:var(--muted);max-width:630px;font-weight:500}
     .hero-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:34px 0 0;max-width:720px}
-    .point{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 18px 18px 54px;min-height:78px;box-shadow:none;position:relative;overflow:hidden}
-    .point:before{content:"✓";position:absolute;left:16px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--red);font-size:1rem;font-weight:900}
+    .point{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 54px 18px 18px;min-height:78px;box-shadow:none;position:relative;overflow:hidden;text-align:right}
+    .point:before{content:"✓";position:absolute;right:16px;left:auto;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--red);font-size:1rem;font-weight:900}
     .point strong{display:block;color:var(--ink);font-size:1.01rem;margin-bottom:2px}
     .point span{font-size:.9rem;color:var(--muted);font-weight:600}
     .hero-actions{margin-top:30px;display:flex;gap:14px;justify-content:flex-start;flex-wrap:wrap}
@@ -156,7 +156,7 @@
 
     @media(max-width:980px){
       .hero-inner,.fit-grid,.role-grid{grid-template-columns:1fr}
-      .hero-inner{gap:30px;padding-top:56px}
+      .hero-inner{gap:30px;padding-top:56px;grid-template-columns:1fr}
       .hero-content{max-width:100%;text-align:center;order:1}
       .hero-visual{order:2}
       .hero-lead,.hero-note,h1{margin-left:auto;margin-right:auto}
@@ -171,13 +171,13 @@
       .header-inner{padding:12px 16px}
       .brand-line,.brand-text{display:none}
       .hero-inner{padding:48px 16px 26px}
-      h1{font-size:clamp(2.35rem,14vw,3.6rem)}
+      h1{font-size:clamp(2rem,11vw,3rem)}
       .section,.apply,.role-section{padding-right:16px;padding-left:16px}
       .mobile-float{display:block}
       body{padding-bottom:84px}
       .a11y-float{bottom:84px}
       .a11y-panel{bottom:136px}
-      .point{padding-left:48px}
+      .point{padding-right:48px;padding-left:18px}
     }
   </style>
 </head>
@@ -210,7 +210,7 @@
         </div>
 
         <div class="hero-content">
-          <div class="eyebrow">גיוס עובדים - חיפה / תל אביב / עבודת שטח</div>
+          <div class="eyebrow">גיוס עובדים - חיפה / תל אביב / השרון</div>
           <h1>אנשי/ות מכירות <span>B2B</span> | פיתוח עסקי HAAT</h1>
           <p class="hero-lead">לא בכל יום אפשר להצטרף לחברה שנמצאת רגע לפני קפיצת מדרגה משמעותית. HAAT, פלטפורמת המשלוחים הצומחת בישראל, מרחיבה את הפעילות ומגייסת אנשי מכירות ופיתוח עסקי עם ניסיון B2B.</p>
           <p class="hero-note">אם יש לכם ניסיון מסחרי חזק, גישה לעבודה מול עסקים ויכולת לייצר קשרים אמיתיים בשטח - זו יכולה להיות ההזדמנות הבאה שלכם.</p>
