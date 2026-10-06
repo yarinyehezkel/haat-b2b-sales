@@ -77,7 +77,7 @@
 </div>
 <script>
 (function(){
-  var params=new URLSearchParams(location.search); var name=(params.get('name')||'').trim().split(' ')[0];
+  var name='';try{name=(sessionStorage.getItem('haat_first_name')||'').trim().split(/\s+/)[0];}catch(e){}
   if(name) document.getElementById('nameSlot').textContent=name;
   window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'lead_thank_you',lead_type:'haat_b2b_sales'});
   var root=document.documentElement,toggle=document.getElementById('accessibilityToggle'),panel=document.getElementById('accessibilityPanel');
